@@ -109,7 +109,7 @@ public class HashMap_UsingLinkedlist_as_Chaining_Implementation{
 		hm.put(new Student(2,"sahil"),Integer.valueOf(80));
 		hm.put(new Student(5,"aftab"),Integer.valueOf(75));
 		
-		System.out.println(hm.contains(new Student(5,"aftab"),345));
+		System.out.println(hm.contains(new Student(5,"aftab"),75));
 	
 		System.out.println(hm);
 		hm.remove(new Student(5,"aftab"),75);
