@@ -5,12 +5,10 @@
 //search : O(n)
 
 package List;
-import java.util.ArrayList;
 
 class MyArrayList<T>{
 	private T[] arr;
 	private int size=0;
-	ArrayList<Integer> ans = new ArrayList<>();
 	
 	@SuppressWarnings("unchecked")
 	MyArrayList()
