@@ -39,11 +39,11 @@ class MyArrayList<T>{
 		if(index<0 || index>size)throw new Exception("Invalid index");
 		if(size==arr.length)extend(arr);
 		
-		for(int i=size;i>index;i++) {
+		for(int i=size;i>index;i--) {
 			arr[i] = arr[i-1];
 		}
 		arr[index] = ele;
-		size--;
+		size++;
 		return true;
 	}
 	
@@ -75,11 +75,7 @@ class MyArrayList<T>{
 	}
 	
 	public boolean contains(T ele) {
-		for(int i=0;i<size;i++)
-			if(arr[i].equals(ele))
-				return true;
-		
-		return false;
+		return indexOf(ele)>=0;
 	}
 	
 	public String toString() {
@@ -124,7 +120,8 @@ public class ArrayList_Implementation {
 		arr.add(new Student(23,"paraksh"));
 		arr.add(new Student(40,"satyam"));
 		arr.add(new Student(13,"rohit"));
-
+		arr.add(1,new Student(10,"purohit"));
+		
 		System.out.println(arr.get(2));
 		System.out.println(arr.contains(new Student(13,"rohit")));
 		System.out.println(arr);
